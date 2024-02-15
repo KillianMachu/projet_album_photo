@@ -1,0 +1,1137 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@100;300;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.home{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+}
+
+/* HEADER */
+
+header{
+    background-color: #121212;
+    color: white;
+    font-size: 1.5em;
+}
+
+header>nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>nav.container{
+    padding: 1em 0;
+}
+
+header>nav>div{
+    display: flex;
+    width: calc(50% - 4em);
+}
+
+header>nav>div>div{
+    display: flex;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+}
+
+
+header a:hover:not(.home):not(.log){
+    text-decoration: underline;
+}
+
+header a.active-page{
+    text-decoration: underline;
+}
+
+header>nav>div>a:not(:first-child), header>nav>div>div>a:not(:first-child){
+    margin-left: 2em;
+}
+
+header>nav>div>div:first-child{
+    margin-right: auto;
+}
+
+header>nav>div:last-child>a{
+    margin-left: auto;
+}
+
+header .log i{
+    margin-right: .5em;
+}
+
+header .log{
+    color: black;
+    background-color: white;
+    padding: 0.5em 1em;
+    border-radius: 10em;
+}
+
+/* FOOTER */
+
+footer{
+    color: white;
+    background-color: #121212;
+    font-weight: 300;
+    padding: 1em 0;
+    margin-top: auto;
+}
+
+footer>.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer>.container>.left>a{
+    color: white;
+    text-decoration: none;
+}
+
+footer>.container>.right{
+    display: flex;
+}
+
+footer>.container>.right>div:not(:first-child){
+    margin-left: 10em;
+}
+
+footer .title_part_footer{
+    font-size: 3em;
+    margin-bottom: .5em;
+    display: flex;
+}
+
+footer>.container>.left>h4{
+    font-weight: 300;
+    line-height: 2em;
+}
+
+footer>.container>.right>div>h4{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+footer>.container>.right>div{
+    display: flex;
+    flex-direction: column;
+}
+
+footer>.container>.right>div>a{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    line-height: 2em;
+}
+
+footer>.container>.right>div>a:hover{
+    text-decoration: underline;
+}
+
+footer>.container>.right>div>div{
+    display: flex;
+    line-height: 2em;
+}
+
+footer>.container>.right>div>div>div{
+    display: flex;
+    font-size: 2em;
+    align-items: center;
+}
+
+footer>.container>.right>div>div>div>a{
+    text-decoration: none;
+    margin-left: .5em;
+    color: white;
+}
+
+footer>p{
+    text-align: center;
+    font-size: .8em;
+    margin-top: 1em;
+}
+
+/* ALERT BOX */
+
+.alert{
+    position: absolute;
+    width: 100%;
+    padding: .5em 0;
+    text-align: center;
+    width: 50%;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1em;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.alert>div{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.alert>div>h4{
+    margin: auto;
+}
+
+.alert>div>i{
+    font-size: 3em;
+    position: absolute;
+    right: .5em;
+    cursor: pointer;
+}
+
+.alert-crea{
+    background-color: rgb(133, 216, 133);
+    border: solid rgb(75, 163, 75) 2px;
+}
+
+.alert-crea>div>i{
+    font-size: 3em;
+    position: absolute;
+    right: .5em;
+    color: rgb(75, 163, 75);
+}
+
+.alert-del{
+    background-color: rgb(216, 133, 133);
+    border: solid rgb(163, 75, 75) 2px;
+}
+
+.alert-del>div>i{
+    font-size: 3em;
+    position: absolute;
+    right: .5em;
+    color: rgb(163, 75, 75);
+}
+
+/* WELCOME */
+
+/* WELCOME - VIDEO */
+
+#home_video{
+    overflow: hidden;
+    position: relative;
+}
+
+#home_video>video{
+    filter: brightness(30%);
+}
+
+#home_video>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    color: white;
+    text-align: center;
+}
+
+#home_video>div>h1{
+    font-size: 6em;
+    margin-bottom: .5em;
+    font-family: 'Dancing Script', cursive;
+}
+
+#home_video>div>h2{
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+#home_video>div>h2:after{
+    content: "";
+    height: 2px;
+    background-color: white;
+    width: 30%;
+    margin: 2em auto;
+    filter: brightness(50%);
+}
+
+#home_video>div>h3{
+    font-size: 1em;
+    font-weight: 300;
+    width: 50%;
+    margin: 0 auto 2em auto;
+}
+
+#home_video>div>a{
+    background-color: white;
+    color: black;
+    padding: .5em 1em;
+    font-size: 2em;
+    text-decoration: none;
+    margin: 3em auto 0 auto;
+    display: flex;
+    width: fit-content;
+}
+
+/* WELCOME - DISCOVER */
+
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.discover{
+    backdrop-filter: brightness(80%);
+}
+
+.discover>.container>h2, #home_content>.create>.container>h2, .tagShow>h2{
+    text-align: center;
+    padding: 1em 0 0 0;
+    font-size: 3em;
+}
+
+.discover>.container>.albums, .albumShow.container>.photos, .tagShow.container>.photos{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2em;
+    margin: auto;
+    padding: 2em 0;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.discover>.container>.albums>div>.img_alb_welcome, .albumShow.container>.photos>div>.img_photo, .tagShow.container>.photos>div>.img_photo{
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    display: flex;
+}
+
+.discover>.container>.albums>div, .albumShow.container>.photos>div, .tagShow.container>.photos>div{
+    width: 100%;
+    margin: auto;
+    border-radius: .5em;
+    overflow: hidden;
+    height: 100%;
+}
+
+.discover>.container>.albums>div{
+    background-color: white;
+}
+
+.albumShow.container>.photos>div, .tagShow.container>.photos>div{
+    backdrop-filter: brightness(90%);
+}
+
+.discover>.container>.albums>div>.img_alb_welcome>img, .albumShow.container>.photos>div>.img_photo>img, .tagShow.container>.photos>div>.img_photo>img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: top;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome, .albumShow.container>.photos>div>.desc_photo, .tagShow.container>.photos>div>.desc_photo{
+    padding: 1em;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome>h3, .albumShow.container>.photos>div>.desc_photo>h3, .tagShow.container>.photos>div>.desc_photo>h3{
+    text-align: center;
+    margin-top: .5em;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome>h4, .albumShow.container>.photos>div>.desc_photo>h4{
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    font-weight: 300;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome>h4>i, .albumShow.container>.photos>div>.desc_photo>h4>i{
+    font-weight: 500;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome .button, .discover>.container>div>a, .albumShow.container>.photos>div>.desc_photo .button, .tagShow.container>.photos>div>.desc_photo .button{
+    text-align: center;
+    font-size: 1.25em;
+    text-decoration: none;
+    padding: .5em 1em;
+    display: flex;
+    margin: 1em auto;
+    width: auto;
+    border: 2px solid black;
+    position: relative;
+    background: none;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome .button:before, .discover>.container>div:last-child>a:before, .albumShow.container>.photos>div>.desc_photo .button:before, .tagShow.container>.photos>div>.desc_photo .button:before{
+    transition: all 0.85s cubic-bezier(0.68, 0, 0.265, 1);
+    content: '';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome .button.visit:before, .discover>.container>div:last-child>a:before, .albumShow.container>.photos>div>.desc_photo .button:before, .tagShow.container>.photos>div>.desc_photo .button:before{
+    background: black;
+}
+
+.discover>.container>div:last-child>a{
+    background-color: white;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.tagShow.container>.photos>div>.desc_photo>div>a.button{
+    background-color: white;
+}
+
+.discover>.container>div:last-child{
+    padding-bottom: 3em;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome .button.delete:before, .albumShow.container>.photos>div>.desc_photo .button:before{
+    background: rgb(213, 158, 158);
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome .alb_delete_welcome, .albumShow.container>.photos>div>.desc_photo .photo_delete{
+    display: none;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome .button:hover:before, .discover>.container>div:last-child>a:hover:before, .albumShow.container>.photos>div>.desc_photo .button:hover:before, .tagShow.container>.photos>div>.desc_photo .button:hover:before{
+    width: 100%;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome .button>span>i, .discover>.container>div:last-child>a>span>i, .albumShow.container>.photos>div>.desc_photo>.buttons>form>a>span>i{
+    margin-right: .5em;
+    font-size: 1.5em;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome .button>span, .discover>.container>div:last-child>a>span, .albumShow.container>.photos>div>.desc_photo>.buttons>form>a>span, .tagShow.container>.photos>div>.desc_photo>.buttons>a>span{
+    text-align: center;
+    z-index: 1;
+    margin: auto;
+    align-items: center;
+    display: flex;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome .visit>span, .discover>.container>div:last-child>a>span, .tagShow.container>.photos>div>.desc_photo>div>a>span{
+    color: white;
+    mix-blend-mode: difference;
+    font-weight: 500;
+}
+
+.discover>.container>.albums>div>.desc_alb_welcome .delete>span, .albumShow.container>.photos>div>.desc_photo>.buttons>form>a>span{
+    color: black;
+    font-weight: 600;
+}
+
+.discover>.container>.albums>p.empty{
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
+    font-weight: 300;
+}
+
+.discover>.container>.albums>img.empty{
+    max-height: 30em;
+    margin: auto;
+}
+
+/* WELCOME - CREATE */
+
+#home_content>.create>.container>div{
+    display: flex;
+    padding: 2em 0;
+}
+
+#home_content>.create>.container>div>.create_img>img{
+    aspect-ratio: 1/1;
+    width: 75%;
+    object-fit: cover;
+    margin-left: auto;
+    display: flex;
+}
+
+#home_content>.create>.container>div>div{
+    width: 50%;
+}
+
+#home_content>.create>.container>div>.create_content{
+    margin: auto 0;
+}
+
+#home_content>.create>.container>div>.create_content>h3{
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    font-weight: 600;
+}
+
+#home_content>.create>.container>div>.create_content>h4{
+    font-size: 1.25em;
+    margin-bottom: 4em;
+    font-weight: 500;
+}
+
+#home_content>.create>.container>div>.create_content>a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: .5em 1em;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    width: fit-content;
+}
+
+/* LOGIN & REGISTER */
+
+.auth{
+    display: flex;
+    height: min-content;
+    width: 80%;
+    margin: 4em auto;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.3);
+}
+
+.auth>div:first-child{
+    width: 60%;
+}
+
+.auth img{
+    object-fit: cover;
+    max-width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+.auth>div:last-child{
+    width: 40%;
+    padding: 2em;
+    margin: auto;
+}
+
+.auth>div:last-child>div{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth>div:last-child>div>h3{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.auth>div:last-child>div>form{
+    display: flex;
+    flex-direction: column;
+}
+
+.auth>div:last-child>div>form>input[type="email"], .auth>div:last-child>div>form input[type="password"], .auth>div:last-child>div>form input[type="text"]{
+    border: none;
+    border-left: 4px solid black;
+    padding: 1em;
+    font-size: 1.2em;
+    backdrop-filter: brightness(90%);
+    background-color: inherit;
+}
+
+.auth>div:last-child>div>form>input[type="password"]{
+    margin-bottom: .5em;
+}
+
+.auth>div:last-child>div>form>*{
+    margin: 1em 0;
+}
+
+.auth>div:last-child>div>form>div{
+    display: flex;
+    margin: 0;
+}
+
+.auth>div:last-child>div>form>.remember>p{
+    margin-left: 1em;
+    font-size: 1.2em;
+}
+
+.auth>div:last-child>div>form>.remember{
+    margin-bottom: 1em;
+}
+
+
+
+.auth>div:last-child>div>form>input[type="submit"], .auth>div:last-child>div>a{
+    font-size: 2em;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: .5em 1em;
+    width: fit-content;
+    margin: .5em auto .5em auto;
+    cursor: pointer;
+}
+
+.auth>div:last-child>div>form>input{
+    outline: none;
+}
+
+.auth>div:last-child>div>form>.alert{
+    position: inherit;
+    transform: inherit;
+    width: 100%;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1em;
+    color: rgb(197, 45, 45);
+}
+
+.auth>div:last-child>div>form>.alert>ul{
+    list-style-type: none;
+}
+
+.auth>div:last-child>div>a:last-child{
+    margin: 0 auto .5em auto;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.auth>div:last-child>div>p{
+    display: flex;
+    align-items: center;
+}
+
+.auth>div:last-child>div>p>span{
+    padding: 0 .5em;
+    font-weight: 500;
+    color: #909090;
+}
+
+.auth>div:last-child>div>p:before, .auth>div:last-child>div>p:after{
+    content:'';
+    flex-grow: 1;
+    height: 1px;
+    background-color: #909090;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.auth>div:last-child>div>h3:nth-child(4){
+    font-size: 1.5em;
+    margin-bottom: .5em;
+}
+
+.auth.register{
+    flex-direction: row-reverse;
+}
+
+/* INDEX */
+
+.albumIndex{
+    height: 100%;
+}
+
+.albumIndex>h1{
+    text-align: center;
+    margin-top: 1em;
+}
+
+.albumIndex>.discover>.container>.albumFilter{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.albumIndex>.discover>.container>.albumFilter>.searchAlbum{
+    position: relative;
+    margin-top: 1em;
+    height: fit-content;
+    display: flex;
+    width: 30%;
+}
+
+.albumIndex>.discover>.container>.albumFilter>.searchAlbum>input[type="search"]{
+    font-size: 1.25em;
+    padding: .5em 2em .5em 1em;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+.albumIndex>.discover>.container>.albumFilter>.searchAlbum>input[type="search"]:focus{
+    outline: none;
+}
+
+.albumIndex>.discover>.container>.albumFilter>.searchAlbum>input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.albumIndex>.discover>.container>.albumFilter>.searchAlbum>input[type="submit"] {
+    display: none;
+}
+
+.albumIndex>.discover>.container>.albumFilter>.searchAlbum>a{
+    position: absolute;
+    right: .5em;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+
+.albumIndex>.discover>.container>.albumFilter>.orderAlbum{
+    position: relative;
+    margin-top: 1em;
+    height: fit-content;
+    display: flex;
+}
+
+.albumIndex>.discover>.container>.albumFilter>.orderAlbum>*{
+    font-size: 1.25em;
+    padding: .5em 2em .5em 1em;
+    border-radius: 5px;
+    border: none;
+    margin-left: 1em;
+}
+
+.albumIndex>.discover>.container>.albumFilter>.orderAlbum>select{
+    border-right: 16px solid transparent
+}
+
+.albumIndex>.discover>.container>.albumFilter>.orderAlbum>select:focus{
+    outline: none;
+}
+
+.albumIndex>.discover>.container>.albumFilter>.orderAlbum>input[type="submit"]{
+    cursor: pointer;
+    text-align: center;
+    padding: .5em 1em;
+    color: white;
+    background-color: #121212;
+}
+
+/* SHOW */
+
+.albumShow{
+    position: relative;
+}
+
+.albumShow>h2{
+    text-align: center;
+    padding: 1em 0 0 0;
+    font-size: 3em;
+}
+
+.photoFilter>form>*{
+    font-size: 1.25em;
+    padding: 0.5em 2em 0.5em 1em;
+    border-radius: 5px;
+    border: none;
+    margin-left: 1em;
+    background-color: inherit;
+    backdrop-filter: brightness(80%);
+}
+
+.photoFilter>form>select>option{
+    background-color: rgb(204, 204, 204);
+}
+
+.photoFilter>form>select{
+    border-right: 16px solid transparent;
+}
+
+.photoFilter>form>input[type="submit"]{
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5em 1em;
+    color: white;
+    background-color: #121212;
+}
+
+.photoFilter>form>input[type="text"]{
+    font-size: 1.25em;
+    padding: 0.5em 2em 0.5em 1em;
+    border-radius: 5px;
+    border: none;
+}
+
+.photoFilter>form>input:focus, .photoFilter>form>select:focus{
+    outline: none;
+}
+
+#photoBig {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#photoBig>div {
+    position: absolute;
+    width: fit-content;
+    max-width: 1100px;
+    height: fit-content;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#photoBig>div>img {
+    max-height: 80vh;
+    max-width: 80vh;
+}
+
+#photoBig>button{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 4em;
+    cursor: pointer;
+    position: fixed;
+    right: 1em;
+    top: 1em;
+}
+
+#photoShow{
+    cursor: pointer;
+}
+
+.albumShow.container>.photos>.empty-zone, .albumIndex>.discover>.container>.albums>.empty-zone{
+    grid-column: 1 / span 5;
+    width: 100%;
+    backdrop-filter: inherit;
+    background-color: inherit;
+}
+
+.albumShow.container>.photos:has(.empty-zone), .albumIndex>.discover>.container>.albums:has(.empty-zone){
+    margin: 0;
+    width: 100%;
+}
+
+.albumShow.container>.photos>.empty-zone>p, .albumIndex>.discover>.container>.albums>.empty-zone>p{
+    font-size: 1.5em;
+}
+
+.empty-zone>p.empty{
+    text-align: center;
+}
+
+.empty-zone>img.empty{
+    width: 50%;
+    margin: auto;
+    display: flex;
+}
+
+.albumShow.container>.photos>div>.desc_photo>h4{
+    margin-bottom: 0;
+}
+
+.albumShow.container>.photos>div>.img_photo{
+    position: relative;
+}
+
+.albumShow.container>.photos>div>.img_photo:hover>i{
+    display: block;
+}
+
+.albumShow.container>.photos>div>.img_photo:hover>img{
+    filter: blur(10px);
+}
+
+.albumShow.container>.photos>div>.img_photo>i{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    display: none;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.photos .tags{
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.photos .tags>i{
+    font-size: 1.75em;
+}
+
+.photos .tags>a, .tagsIndex>.tags>a{
+    border: 2px solid black;
+    padding: 0 .5em;
+    text-decoration: none;
+    color: black;
+    border-radius: 5em;
+    font-size: 1em;
+    width: fit-content;
+    font-weight: 700;
+    transition: all .5s ease-in-out;
+}
+
+.photos .tags>a:hover, .tagsIndex>.tags>a:hover{
+    background-color: black;
+    color: white;
+}
+
+.photos .tags>a:not(:first-child){
+   margin-left: 1em;
+}
+
+.photos p{
+    font-size: 1.25em;
+}
+
+.photos p>b{
+    font-weight: 700;
+}
+
+.return{
+    border: 2px solid black;
+    padding: 0 .5em;
+    text-decoration: none;
+    color: black;
+    border-radius: 5em;
+    font-size: 2em;
+    width: fit-content;
+    font-weight: 700;
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+    transition: all .5s ease-in-out;
+}
+
+.return:hover{
+    background-color: black;
+    color: white;
+}
+
+.return>span{
+    margin: 0 1em;
+}
+
+#showCreateForm, .albShow-delete>input[type="submit"]{
+    cursor: pointer;
+    font-size: 2em;
+    padding: .25em .5em;
+    border-radius: .25em;
+}
+
+#showCreateForm{
+    position: absolute;
+    top: 7.5em;
+    right: 0;
+    background-color: rgb(133, 216, 133);
+    border: solid rgb(75, 163, 75) 2px;
+}
+
+.albShow-delete>input[type="submit"]{
+    background-color: rgb(216, 133, 133);
+    border: solid rgb(163, 75, 75) 2px;
+}
+
+#showCreateForm:focus{
+    outline: none;
+}
+
+div#createForm{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    display: none;
+}
+
+#createForm>form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    background-color: white;
+    padding: 6em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#createForm>form>.create-container input, .albumCreate>form>.create-container input{
+    backdrop-filter: brightness(80%);
+    background-color: inherit;
+    border: none;
+    font-size: 1.25em;
+    padding: .5em 1em;
+    margin: 0;
+}
+
+#createForm>form .input-fields, .albumCreate>form .input-fields{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#createForm>form .input-fields>div, .albumCreate>form .input-fields>div{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+#createForm>form .input-fields>div>i, .albumCreate>form .input-fields>div>i{
+    font-size: 3em;
+    cursor: pointer;
+}
+
+#createForm>form input:focus, .albumCreate>form input:focus{
+    outline: none;
+}
+
+#createForm>form input[type="file"], .albumCreate>form input[type="file"]{
+    cursor: pointer;
+}
+
+#add-photo{
+    width: fit-content;
+    padding: .5em 1em;
+    font-size: 1.25em;
+    margin-top: 1em;
+    border: 2px solid black;
+    background-color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form.form-create>input[type="submit"], form#add>.create-container>[type="submit"]{
+    width: fit-content;
+    padding: .5em 1em;
+    font-size: 1.5em;
+    margin-top: 1em;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#closeCreateForm{
+    position: absolute;
+    top: .25em;
+    right: .25em;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+
+form.form-create>.alert{
+    position: inherit;
+    transform: inherit;
+    text-align: left;
+}
+
+form.form-create>.alert>ul{
+    list-style-type: none;
+}
+
+/* TAGS */
+
+.tagsIndex>h1{
+    text-align: center;
+    padding: 1em 0 0 0;
+    font-size: 3em;
+}
+
+.tagsIndex>h2{
+    text-align: center;
+    padding: 1em 0 0 0;
+}
+
+.tagsIndex>.tags{
+    display: flex;
+    margin: 1em 0;
+}
+
+.tagsIndex>.tags>a:not(:first-child){
+    margin-left: 1em;
+}
+
+.tagsIndex>.tags>a{
+    margin: 2em 0;
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+}
+
+.tagsIndex>.tags>a>i{
+    margin-left: .5em;
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.photoFilter{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+/* CREATE ALBUM */
+
+.albumCreate>h2{
+    text-align: center;
+    padding: 1em 0 0 0;
+    font-size: 3em;
+}
+
+.albumCreate>form>.create-container>.input-fields>input[type="text"]{
+    width: fit-content;
+}
+
+.albumCreate>form>.create-container{
+    display: flex;
+    flex-direction: column;
+}
